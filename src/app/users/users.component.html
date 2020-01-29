@@ -1,0 +1,17 @@
+<table border="2">
+    <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Repeat Password</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.psw}}</td>
+        <td>{{user.repeat}}</td>
+        <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+        <button class="btn btn-success" (click)="updateUser(user)">Update</button></td>
+    </tr>
+</table>
