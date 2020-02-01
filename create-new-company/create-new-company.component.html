@@ -1,0 +1,72 @@
+    <div class="container">
+      <h1 class="text-center">Sign Up</h1>
+    </div>
+      <form [formGroup]="company" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="id" ><b class="text-primary">ID</b></label><br>
+          <input type="text"
+           class="form-control" 
+           formControlName="id"
+           placeholder="Enter CompanyName" 
+            name="id" required>
+        </div>
+        <div class="form-group">
+          <label for="cname"><b class="text-primary">CompanyName</b></label><br>
+          <input type="text"
+           class="form-control" 
+           formControlName="cname"
+           placeholder="Enter CompanyName" 
+           name="cname" required>
+        </div>
+        <div class="form-group">
+          <label for="ceo" ><b class="text-primary">CEOName</b></label>
+          <input type="text" 
+          class="form-control"
+          formControlName="ceo"
+           placeholder="Enter CEOName and CompanyName"  
+          name="ceo" required>
+        </div>
+        <div class="form-group">
+          <label for="bms"><b class="text-primary">BoardMembers</b></label>
+          <input type="text" 
+          class="form-control"
+          formControlName="bms"
+           placeholder="Enter BoardMembers"  
+          name="bms" required>
+        </div>
+        <div class="form-group">
+          <label for="tover"><b class="text-primary">TurnOver</b></label>
+          <input type="text" 
+          class="form-control" 
+          formControlName="tover"
+           placeholder="Enter TurnOver" 
+          name="tover" required>
+        </div>
+        <div class="form-group">
+          <label for="tover" ><b class="text-primary">LSE</b></label>
+          <select multiple class="form-control" 
+          formControlName="tover"
+           placeholder="Enter TurnOver" 
+          name="tover" required>
+          <option>BSE</option>
+          <option>NSE</option></select>
+        </div>
+        <div class="form-group">
+          <label for="bdec"><b class="text-primary">BreifDescription</b></label>
+          <textarea class="form-control" 
+          formControlName="bdesc"
+           placeholder="Enter BreifDescription about company" 
+           name="bdec" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="date"><b class="text-primary">IPODate</b></label>
+          <input type="text"
+           class="form-control" 
+           formControlName="date"
+           placeholder="Enter IPODate" 
+           name="date" required>
+        </div>
+        <button class="btn btn-success" 
+        (click)="addCompany()">Submit</button>
+        <button type="button" class="btn btn-danger">Cancel</button>
+      </form>
