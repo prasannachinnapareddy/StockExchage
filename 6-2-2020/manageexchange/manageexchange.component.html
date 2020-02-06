@@ -1,0 +1,26 @@
+<div class="container">
+<form [formGroup]="exchange" (ngSubmit)="onSubmit()">
+<div class="form-group">
+<label for="id" ><b class="text-primary">Id</b></label>
+<input type="text" formcontrolname="id" class="form-control" 
+placeholder="Enter Id" name="id" required>
+</div>
+ <div class="form-group">
+    <label for="se" class="text-primary">StockExchange</label>
+    <input type="email" formcontrolname="se" class="form-control"
+    placeholder="Enter StockExchange Name" name="se" required>
+  </div>
+  <div class="form-group">
+    <label for="breif"><b class="text-primary">Breif</b></label>
+    <textarea  formcontrolname="breif" class="form-control" 
+    placeholder="Enter breif description" name="breif" required></textarea>
+  </div>
+  <div class="form-group ">
+    <label for="address" class="text-primary"></label>
+      <textarea formcontrolname="address" class="form-control" 
+      placeholder="Enter Current Address" name="address" required></textarea>
+  </div>
+  <button type="button" class="btn btn-success">Submit</button>
+  <button type="button" class="btn btn-danger">Cancel</button>
+</form>
+</div>

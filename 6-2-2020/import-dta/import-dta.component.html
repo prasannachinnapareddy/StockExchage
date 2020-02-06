@@ -1,0 +1,9 @@
+    <div class="container">
+            <form [formGroup]="uploadForm" (ngSubmit)="upload()">
+        <div class="form-group">
+          <label for="upload excel file">Upload Excel File</label>
+          <input type="file" class="form-control" id="excel" formControlName="excel" placeholder="Enter Excel File" name="excel">
+          </div>
+       <button type="submit" class="btn btn-info">Upload</button>
+      </form>
+    </div>
