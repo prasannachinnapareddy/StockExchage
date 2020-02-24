@@ -1,0 +1,24 @@
+<table border="2">
+    <tr>
+        <th>ID</th>
+        <th>BriefDescription</th>
+        <th>BoardMembers</th>
+        <th>CEO</th>
+        <th>CompanyName</th>
+        <th>StockExchange</th>
+        <th>TotalShares</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let company of companies">
+        <td>{{company.id}}</td>
+        <td>{{company.bdec}}</td>
+        <td>{{company.bms}}</td>
+        <td>{{company.ceo}}</td>
+        <td>{{company.cname}}</td>
+        <td>{{company.se}}</td>
+        <td>{{company.tover}}</td>
+        <td><button class="btn btn-danger" (click)="deleteCompany(company.id)">Delete</button>
+        <button class="btn btn-success" (click)="updateCompany(company)">Update</button></td>
+    </tr>
+  </table>
+  

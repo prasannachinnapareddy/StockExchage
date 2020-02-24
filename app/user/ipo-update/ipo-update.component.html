@@ -1,0 +1,58 @@
+<div class="container">
+  <h1 class="text-center">Update IPO Form</h1>
+    <p>Please Update form.</p><br>
+    <div class="col-7 mt-4 p-5 shadow bg-white rounded">
+    <form [formGroup]="updateipo" (ngSubmit)="updateIpo()">
+    <div class="form-group">
+    <label for="id" ><b class="text-primary">Id</b></label>
+    <input type="text" 
+    class="form-control"
+    formcontrolname="id" 
+     placeholder="Enter Id"
+      name="id" required>
+    </div>
+     <div class="form-group">
+        <label for="cname"><b class="text-primary">CompanyNmae</b></label>
+        <input type="text"
+          class="form-control" 
+          formcontrolname="cname"
+        placeholder="Enter Company Name" 
+        name="cname" required>
+      </div>
+      <div class="form-group">
+        <label for="price"><b class="text-primary">PricePerShare</b></label>
+        <input type="text" 
+        class="form-control"
+        formcontrolname="price" 
+        placeholder="Enter PricePershare" 
+        name="price" required>
+      </div>
+      <div class="form-group">
+        <label for="remarks"><b class="text-primary">Remarks</b></label>
+        <input type="text" 
+        class="form-control" 
+        formcontrolname="remarks"
+        placeholder="Enter Remarks" 
+        name="remarks" required>
+      </div>
+      <div class="form-group">
+        <label for="se"><b class="text-primary" >StockExchange</b></label>
+        <input type="text"
+         class="form-control" 
+         formcontrolname="se"
+        placeholder="Enter StockExchange" 
+        name="se" required>
+      </div>
+    <div class="form-group">
+        <label for="tshares"><b class="text-primary">TotalShares</b></label>
+        <input type="text" 
+        class="form-control"
+        formcontrolname="tshares" 
+         placeholder="Enter Total Shares" 
+         name="tshares" required>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    </div>
+
+

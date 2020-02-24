@@ -1,0 +1,21 @@
+<table border="2">
+    <tr>
+        <th>ID</th>
+        <th>Company Name</th>
+        <th>PricePerShare</th>
+        <th>Remarks</th>
+        <th>StockExchange</th>
+        <th>TotalShares</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let ipo of ipos">
+        <td>{{ipo.id}}</td>
+        <td>{{ipo.cname}}</td>
+        <td>{{ipo.price}}</td>
+        <td>{{ipo.remarks}}</td>
+        <td>{{ipo.se}}</td>
+        <td>{{ipo.tshares}}</td>
+        <td><button class="btn btn-danger" (click)="deleteIpo(ipo)">Delete</button>
+        <button class="btn btn-success" (click)="updateIpo(ipo)">Update</button></td>
+    </tr>
+</table>

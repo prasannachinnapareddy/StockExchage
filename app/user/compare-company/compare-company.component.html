@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <h3 class="text-center">Compare Company</h3>
+    <div class="card card-body mt-5 h-100 w-75 bg-white">
+    <form [formGroup]="company" (ngSubmit)="onSubmit()">
+      <h5 class="test-center">Please Fill Form</h5>
+      <div class="form-group">
+        <label for="company_sector" ><b class="text-primary">Select Company/Sector</b></label>
+        <select  class="form-control" 
+        formControlName="company_sector"
+         placeholder="Enter company/sector" 
+        name="company_sector" required>
+        <option>Company</option>
+        <option>Sector</option></select>
+      </div>
+      <div class="form-group">
+        <label for="se"><b class="text-primary">Select StockExchange</b></label>
+        <select formcontrolname="se" class="form-control" 
+        placeholder="Enter StockExchange" id="se" required>
+        <option>BSE</option>
+        <option>NSE</option></select>
+      </div>
+    <div class="form-group">
+        <label for="cname_sname"><b class="text-primary">Select CompanyName/SectorName</b></label>
+        <input type="text" formcontrolname="cname_sname" class="form-control" 
+        placeholder="Enter CompanyName/SectorName" id="cname_sname" required>
+      </div>
+    <div class="form-group">
+        <label for="fdate" ><b class="text-primary">FromDate</b></label>
+        <input type="date" formcontrolname="date" class="form-control" 
+        placeholder="Enter Open Date Time" id="date" required>
+    </div>
+    <div class="form-group">
+        <label for="tdate"><b class="text-primary">ToDate</b></label>
+        <input type="date" formcontrolname="date" class="form-control" 
+        placeholder="Enter Open Date Time" id="date" required>
+    </div>
+      <button type="button" class="btn btn-success">GenerateMap</button>
+    </form>
+    </div>
+</div>
+
