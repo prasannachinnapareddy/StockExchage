@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-3 mt-5">
+    <ul class="list-group text-center w-100">
+          <li class="list-group-item">
+            <a  routerLink="/ipos"><b>IPOS</b></a>
+          </li>
+          <li class="list-group-item">
+            <a  routerLink="/companieslist"><b>Company List</b></a>
+          </li>
+          <li class="list-group-item">
+            <a  routerLink="/profile"><b>UserProfile</b></a>
+          </li>
+            <li class="list-group-item">
+              <a  routerLink="/viewipos"><b>IPO List</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/compare-sector"><b>Compare Sector</b></a>
+            </li>
+          </ul>
+  </div>
+  <div class="col-9 mt-5">
+  <h3 class="text-center">Compare Company</h3>
+    <div class="card card-responsive mt-5 h-100 w-75 bg-light">
+      <div class="card-body">
+    <form [formGroup]="company" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="companysector" ><b class="text-primary">Select Company OR Sector</b></label>
+        <select  class="form-control" 
+        formControlName="csector"
+         placeholder="Enter company/sector" 
+        name="csector" required>
+        <option>Company</option>
+        <option>Sector</option></select>
+      </div>
+      <div class="form-group">
+        <label for="se"><b class="text-primary">Select StockExchange</b></label>
+        <select formcontrolname="se" class="form-control" 
+        placeholder="Enter StockExchange" id="se" required>
+        <option>BSE</option>
+        <option>NSE</option></select>
+      </div>
+    <div class="form-group">
+        <label for="cname_sname"><b class="text-primary">Select CompanyName OR SectorName</b></label>
+        <input type="text" formcontrolname="cname_sname" class="form-control" 
+        placeholder="Enter CompanyName/SectorName" id="cname_sname" required>
+      </div>
+    <div class="form-group">
+        <label for="fdate" ><b class="text-primary">FromDate</b></label>
+        <input type="date" formcontrolname="date" class="form-control" 
+        placeholder="Enter Open Date Time" id="date" required>
+    </div>
+    <div class="form-group">
+        <label for="tdate"><b class="text-primary">ToDate</b></label>
+        <input type="date" formcontrolname="date" class="form-control" 
+        placeholder="Enter Open Date Time" id="date" required>
+    </div>
+      <button type="button" class="btn btn-success" routerLink="/charts">GenerateMap</button>
+    </form>
+    </div>
+</div>
+</div>
+</div>
+</div>

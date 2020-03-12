@@ -1,0 +1,29 @@
+{
+  "company": [
+    {
+      "id": "1",
+      "cname": "TCS",
+      "ceo": "Brein",
+      "bms": "Ravi",
+      "lse": [
+        "BSE",
+        "NSE"
+      ],
+      "bdesc": "Good Company",
+      "tover": 564588888,
+      "date": "1-2-2020"
+    },
+    {
+      "id": "2",
+      "cname": "TCS",
+      "ceo": "prasanna",
+      "bms": "saipriya",
+      "lse": "",
+      "bdesc": "good company",
+      "tover": [
+        "BSE"
+      ],
+      "date": "9-8-1999"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-md-3 mt-5">
+        <ul class="list-group list-group-responsive text-center w-100">
+              <li class="list-group-item">
+                <a  routerLink="/users"><b>UserDetails</b></a>
+              </li>
+              <li class="list-group-item">
+                <a  routerLink="/import-dta"><b>ImportData</b></a>
+              </li>
+              <!-- <li class="list-group-item">
+                <a  routerLink="/create-new-company"><b>CreateNewCompany</b></a>
+              </li> -->
+              <!-- <li class="list-group-item">
+                <a  routerLink="/managecompany"><b>ManageCompany</b></a>
+              </li> -->
+              <li class="list-group-item">
+                <a  routerLink="/updateipodetails"><b>UpdateIpoDetails</b></a>
+              </li>
+              <li class="list-group-item">
+                <a  routerLink="/manageexchange"><b>ManageExchange</b></a>
+              </li>
+              <!-- <li class="list-group-item">
+                <a  routerLink="/logout"><b>Logout</b></a>
+              </li> -->
+            </ul>
+            </div>
+<div class="col-9 mt-5">
+  <h3 class="text-center">Company List</h3>
+  <div class="table-responsive">
+    <table  class="table table-bordered mt-5">
+    <tr>
+        <th>ID</th>
+        <th>BriefDescription</th>
+        <th>BoardMembers</th>
+        <th>CEO</th>
+        <th>CompanyName</th>
+        <th>StockExchange</th>
+        <th>TotalShares</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let company of companies">
+        <td>{{company.id}}</td>
+        <td>{{company.bdec}}</td>
+        <td>{{company.bms}}</td>
+        <td>{{company.ceo}}</td>
+        <td>{{company.cname}}</td>
+        <td>{{company.se}}</td>
+        <td>{{company.tover}}</td>
+        <td><button class="btn btn-danger" (click)="deleteCompany(company.id)"><i class="fa 
+        fa-trash" aria-hidden="true"></i></button>&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-warning" (click)="updateCompany(company)"><i class="fa 
+          fa-pencil-alt" aria-hidden="true"></i></button></td>
+    </tr>
+  </table>
+  </div>
+  <div class="text-center mt-5"> 
+      <button type="submit" class="btn btn-info" 
+      routerLink="/create-new-company">Add Company</button>&nbsp;&nbsp;&nbsp;
+      <button type="submit" class="btn btn-danger" routerLink="/admin-home-page">Back</button>
+  </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container mt-5">
+    <h3 class="text-center">Manage Exchange</h3>
+    <div class="card card-responsive w-75 h-100 bg-light">
+      <div class="card-body">
+      <form [formGroup]="updateForm" (ngSubmit)="updateStockExchange()">
+        <div class="form-group">
+          <label for="name"><b class="text-primary">Id</b></label>
+          <input type="text" 
+          class="form-control" id="id" 
+          disabled formControlName="id"  disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="se"><b class="text-primary">Stock Exchange</b></label>
+          <select multiple class="form-control" 
+          id="se" formControlName="se" name="se">
+            <option>BSE</option>
+            <option>NSE</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="breif Description"><b class="text-primary">Breif</b></label>
+          <input type="text"
+           class="form-control" id="breif" formControlName="breif" 
+           placeholder="Enter Description"
+            name="breif" reqired>
+        </div>
+
+        <div class="form-group">
+          <label for="address"><b class="text-primary">Address</b></label>
+          <input type="text" 
+          class="form-control" id="address" formControlName="address"
+           placeholder="Enter Address"
+            name="address" required>
+        </div>
+
+          <div class="form-group">
+            <label for="remarks"><b class="text-primary">Remarks</b></label>
+            <input class="form-control" 
+            id="remarks" formControlName="remarks" placeholder="Remarks If any"
+              rows="3" name="boc" required>
+          </div>
+
+        <button type="submit" class="btn btn-success">Update</button>
+        <button type="submit" class="btn btn-danger" routerLink="/manageexchange">Cancel</button>
+
+  </form>
+  </div>
+  </div>
+</div>

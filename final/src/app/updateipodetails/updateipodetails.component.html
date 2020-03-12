@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-md-3 mt-5">
+      <ul class="list-group text-center w-100">
+        <li class="list-group-item">
+          <a  routerLink="/users"><b>UserDetails</b></a>
+        </li>
+        <li class="list-group-item">
+          <a  routerLink="/import-dta"><b>ImportData</b></a>
+        </li>
+        <!-- <li class="list-group-item">
+          <a  routerLink="/updateipodetails"><b>Update IPOS Details</b></a>
+        </li> -->
+        <li class="list-group-item">
+          <a  routerLink="/managecompany"><b>ManageCompany</b></a>
+        </li>
+          <!-- <li class="list-group-item">
+            <a  routerLink="/stockexchange"><b>StockExchange</b></a>
+          </li> -->
+          <li class="list-group-item">
+            <a  routerLink="/manageexchange"><b>ManageExchange</b></a>
+          </li>
+        </ul>
+</div>
+    <div class="col-9 mt-5">
+        <h3 class="text-center">IPO List</h3>
+        <div class="table-responsive">
+          <table  class="table table-bordered mt-5">
+    <tr>
+        <th>Company name</th>
+        <th>Listed in Stock Exchange</th>
+        <th>Price per Share</th>
+        <th>Total number of Shares</th>
+        <th>Open Date</th>
+        <th>Remarks</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let ipo of ipos">
+        <td>{{ipo.companyname}}</td>
+        <td>{{ipo.lse}}</td>
+        <td>{{ipo.pps}}</td>
+        <td>{{ipo.tnos}}</td>
+        <td>{{ipo.odate}}</td>
+        <td>{{ipo.remarks}}</td>
+        <td>
+        <button class="btn btn-danger" (click)="deleteIpo(ipo.id)"><i class="fa 
+          fa-trash" aria-hidden="true"></i></button>&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-warning" (click)="updateIpo(ipo)"><i class="fa 
+          fa-pencil-alt" aria-hidden="true"></i></button></td>
+    </tr>
+</table>
+</div>
+<div class="text-center mt-5"> 
+    <button type="submit" class="btn btn-info" 
+    routerLink="/ipos">Add IPO</button>&nbsp;
+    <button type="submit" class="btn btn-danger" routerLink="/user-home-page">Back</button>
+</div>

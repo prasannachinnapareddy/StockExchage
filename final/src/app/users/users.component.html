@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-md-3 mt-5">
+      <ul class="list-group text-center w-100">
+            <!-- <li class="list-group-item">
+              <a  routerLink="/users"><b>UserDetails</b></a>
+            </li> -->
+            <li class="list-group-item">
+              <a  routerLink="/import-dta"><b>ImportData</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/updateipodetails"><b>Update IPO Details</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/managecompany"><b>ManageCompany</b></a>
+            </li>
+              <!-- <li class="list-group-item">
+                <a  routerLink="/stockexchange"><b>StockExchange</b></a>
+              </li> -->
+              <li class="list-group-item">
+                <a  routerLink="/manageexchange"><b>ManageExchange</b></a>
+              </li>
+              <!-- <li class="list-group-item">
+                <a  routerLink="/logout"><b>Logout</b></a>
+              </li> -->
+            </ul>
+    </div>
+<div class="col-9 mt-5">
+<h3 class="text-center">Users List</h3>
+<div class="table-responsive">
+  <table class="table table-bordered mt-5">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>UserNmae</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Repeat Password</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.repeatpassword}}</td>
+        <td>
+         <button type="submit" class="btn btn-danger"><i class="fa fa-trash" 
+          aria-hidden="true" (click)="deleteUser(user)"></i></button>&nbsp;&nbsp;&nbsp;
+         <button type="submit" class="btn btn-warning"><i class="fa fa-pencil-alt" 
+          aria-hidden="true" (click)="updateUser(user)"></i></button></td>
+            </tr>
+</table>
+</div>
+<div class="text-center mt-5"> 
+    <button type="submit" class="btn btn-info" 
+    routerLink="/register">Add User</button>&nbsp;
+    <button type="submit" class="btn btn-danger" routerLink="/home">Back</button>
+</div>
+</div>

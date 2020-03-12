@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-3 mt-5">
+    <ul class="list-group text-center w-100">
+          <li class="list-group-item">
+            <a  routerLink="/companieslist"><b>Company List</b></a>
+          </li>
+          <li class="list-group-item">
+            <a  routerLink="/compare-company"><b>Compare Company</b></a>
+          </li>
+          <li class="list-group-item">
+            <a  routerLink="/compare-sector"><b>Compare Sector</b></a>
+          </li>
+            <li class="list-group-item">
+              <a  routerLink="/viewipos"><b>IPO List</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/profile"><b>UserProfile</b></a>
+            </li>
+          </ul>
+  </div>
+  <div class="col-9 mt-5">
+  <h3 class="text-center">Create IPO Of Company</h3>
+  <div class="card card-responsive mt-5 w-75 h-100 bg-light" >
+    <div class="card-body">
+    <form [formGroup]="ipoForm" (ngSubmit)="addIpo()">
+        <div class="form-group">
+          <label for="companyname"><b class="text-primary">Company Name</b></label>
+          <input type="text" class="form-control" 
+          id="companyname" formControlName="companyname"
+            placeholder="Enter Company Name" name="companyname">
+        </div>
+        <div class="form-group">
+          <label for="lse"><b class="text-primary">Stock Exchange</b></label>
+          <select multiple class="form-control"
+           id="lse" formControlName="lse" name="lse">
+            <option>BSE</option>
+            <option>NSE</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="price for share"><b class="text-primary">Price Per Share</b></label>
+          <input type="number" class="form-control" 
+          id="pps" formControlName="pps" placeholder="Enter Price Per Share"
+            name="pps">
+        </div>
+        <div class="form-group">
+          <label for="total number of shares"><b class="text-primary">Total Number Of Shares</b></label>
+          <input type="number" class="form-control" id="tnos" 
+          formControlName="tnos" placeholder="Enter Total Number Of Shares"
+            name="tnos">
+        </div>
+        <div class="form-group">
+          <label for="open date"><b class="col-2 col-form-label text-primary">Open Date</b></label>
+          <div class="col-10">
+            <input class="form-control" type="date" 
+            value="2011-08-19" id="odate" formControlName="odate"  name="odate">
+          </div>
+      </div>
+        <div class="form-group">
+          <label for="remarks"><b class="text-primary">Remarks</b></label>
+          <textarea class="form-control" id="remarks"
+           formControlName="remarks" placeholder="Remarks If any"
+            rows="3" name="boc"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn btn-danger" 
+        routerLink="/user-home-page">Cancel</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
