@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-3 mt-5">
+      <ul class="list-group text-center w-100">
+            <li class="list-group-item">
+              <a  routerLink="/users"><b>UserDetails</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/import-dta"><b>ImportData</b></a>
+            </li>
+            <!-- <li class="list-group-item">
+              <a  routerLink="/create-new-company"><b>CreateNewCompany</b></a>
+            </li> -->
+            <li class="list-group-item">
+              <a  routerLink="/managecompany"><b>ManageCompany</b></a>
+            </li>
+            <!-- <li class="list-group-item">
+              <a  routerLink="/stockexchange"><b>StockExchange</b></a>
+            </li> -->
+            <li class="list-group-item">
+              <a  routerLink="/manageexchange"><b>ManageExchange</b></a>
+            </li>
+            <!-- <li class="list-group-item">
+              <a  routerLink="/logout"><b>Logout</b></a>
+            </li> -->
+          </ul>
+          </div>
+<div class="col-9 mt-5">
+    <h3 class="text-center">Stock Exchange</h3>
+    <div class="card card-responsive bg-light h-100 w-75 mt-5 p-5">
+      <div class="card-body">
+  <form [formGroup]="exchangeForm" (ngSubmit)="addStockExchange()">
+   <div class="form-group">
+    <label for="se"><b class="text-primary">Stock Exchange</b></label>
+    <select multiple class="form-control" 
+    id="se" formControlName="se" name="se">
+      <option>BSE</option>
+      <option>NSE</option>
+    </select>
+  </div>
+    <div class="form-group">
+      <label for="breif description"><b class="text-primary">Breif</b></label>
+      <input type="text" class="form-control" 
+      id="breif" formControlName="breif" placeholder="Enter Breif Description"
+        name="breif">
+    </div>
+    <div class="form-group">
+      <label for="address"><b class="text-primary">Address</b></label>
+      <input type="text" class="form-control" id="address" 
+      formControlName="address" placeholder="Enter Address"
+        name="address">
+    </div>
+    
+    <div class="form-group">
+      <label for="remarks"><b class="text-primary">Remarks</b></label>
+      <textarea class="form-control" id="remarks"
+       formControlName="remarks" placeholder="Remarks If any"
+        rows="3" name="boc"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success mt-5">Submit</button>&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-danger mt-5" 
+    routerLink="/admin-home-page">Cancel</button>
+</form>
+  </div>
+  </div>
+</div>

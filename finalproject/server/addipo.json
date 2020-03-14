@@ -1,0 +1,16 @@
+{
+    "ipo": [
+      {
+        "id": "1",
+        "cname": "CTS",
+        "se": [
+          "BSE",
+          "NSE"
+        ],
+        "price": 26343,
+        "tshares": 50,
+        "date": "1-2-2020",
+        "remarks":"good"
+    }
+]
+  }

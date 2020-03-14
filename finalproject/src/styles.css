@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import './assets/fontawesome-free-5.12.1-web/css/all.css';
+body
+{
+    width:100%;
+    min-height:100vh;
+    background:url("../src/assets/1.jpg") no-repeat;
+    background-size: cover;
+}
+nav
+{
+  width:100%;
+  background-color: white;
+}
+#footer {
+    position: fixed;
+    top:10;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:white;
+    color: black;
+    text-align: center;
+  }
+  #footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+  }

@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 101,
+      "name": "prasanna",
+      "email": "prasanna@gmail.com",
+      "psw": "prasanna",
+      "repeat": "prasanna"
+    },
+    {
+      "id": "103",
+      "name": "sai",
+      "email": "saipriya@gmail.com",
+      "psw": "saipriya",
+      "repeat": "saipriya"
+    },
+    {
+      "id": "104",
+      "name": "Krishna",
+      "email": "krishna@gmail.com",
+      "psw": "krishna",
+      "repeat": "krishna"
+    }
+  ]
+}

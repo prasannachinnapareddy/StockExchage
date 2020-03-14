@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-md-3 mt-5">
+      <ul class="list-group text-center w-100">
+            <li class="list-group-item">
+              <a  routerLink="/ipos"><b>IPOS</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/companieslist"><b>CompanyList</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/compare-sector"><b>Compare Sector</b></a>
+            </li>
+            <!-- <li class="list-group-item">
+                <a  routerLink="/compare-company"><b>Compare Company</b></a>
+              </li> -->
+              <li class="list-group-item">
+                <a  routerLink="/viewipos"><b>IPO List</b></a>
+              </li>
+              <!-- <li class="list-group-item">
+                <a  routerLink="/home"><b>Logout</b></a>
+              </li> -->
+            </ul>
+    </div>
+    <div class="col-9 mt-5">
+     <h2 class="text-center text-success"><b>{{user.username}} </b></h2>
+    <div *ngIf="user" class="row justify-content-center ">
+        <div class="card card-responsive mt-5 h-75 w-50 bg-light">
+            <div class="card-body">
+                <h4 class="text-center"><b>Id : {{user.id}}</b></h4>
+                <h5 class="text-center "><b>Name : {{user.name}}</b></h5>
+                <h5 class="text-center"><b>Email : {{user.email}}</b></h5>
+                <h5 class="text-center"><b>UserName : {{user.username}}</b></h5>
+                <button type="submit" class="btn btn-danger float-right" 
+                (click)="updateUser()"><i class="fa fa-pencil-alt" aria-hidden="true"></i>
+                </button> 
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>

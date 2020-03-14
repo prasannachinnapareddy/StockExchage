@@ -1,0 +1,58 @@
+<div class="container mt-5">
+    <h1 class="text-center">Update UserProfile</h1>
+    <div class="card card-responsive w-75 h-100 bg-light mt-5">
+      <div class="card-body">
+    <form [formGroup]='updateUserProfile' (ngSubmit)="updateTheUser()">
+      <div class="form-group">
+        <label for="id"><b class="text-primary">ID</b></label><br>
+        <input type="text" 
+        formControlName="id"
+         class="form-control" 
+         placeholder="Enter id" 
+         name="id" disabled required><br>
+      </div>
+     <div class="form-group">
+        <label for="name"><b class="text-primary">Name</b></label><br>
+        <input type="text" 
+        formControlName="name"
+         class="form-control" 
+         placeholder="Enter Name" 
+         name="name" required><br>
+      </div>
+      <div class="form-group">
+        <label for="username"><b class="text-primary">UserName</b></label><br>
+        <input type="text" 
+        formControlName="username"
+         class="form-control" 
+         placeholder="Enter UserName" 
+         name="username" required><br>
+      </div>
+      <div class="form-group">
+        <label for="email"><b class="text-primary">Email</b></label><br>
+        <input type="text" 
+        formControlName="email"
+         class="form-control" 
+         placeholder="Enter Email" 
+         name="email" required><br>
+      </div>
+      <div class="form-group">
+        <label for="password"><b class="text-primary">Password</b></label>
+        <input type="password"
+         formControlName="password" 
+         class="form-control" placeholder="Enter Password"
+          name="password" required><br>
+      </div>
+      <div class="form-group">
+        <label for="repeatpassword"><b class="text-primary">Repeat Password</b></label>
+        <input type="password"
+         formControlName="repeatpassword" 
+         class="form-control" 
+         placeholder="Repeat Password" 
+         name="repeatpassword"  required><br>
+      </div>
+      <button type="submit" class="btn btn-success">Update</button>
+      <button type="submit" class="btn btn-danger" routerLink="/profile">Cancel</button>
+    </form>
+  </div>
+  </div>
+  </div>

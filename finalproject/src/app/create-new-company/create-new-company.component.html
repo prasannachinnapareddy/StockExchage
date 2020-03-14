@@ -1,0 +1,96 @@
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3 mt-5">
+  <ul class="list-group text-center w-100">
+        <li class="list-group-item">
+          <a  routerLink="/users"><b>UserDetails</b></a>
+        </li>
+        <li class="list-group-item">
+          <a  routerLink="/import-dta"><b>ImportData</b></a>
+        </li>
+        <li class="list-group-item">
+          <a  routerLink="/updateipodetails"><b>Update IPOS Details</b></a>
+        </li>
+        <li class="list-group-item">
+          <a  routerLink="/managecompany"><b>ManageCompany</b></a>
+        </li>
+          <!-- <li class="list-group-item">
+            <a  routerLink="/stockexchange"><b>StockExchange</b></a>
+          </li> -->
+          <li class="list-group-item">
+            <a  routerLink="/manageexchange"><b>ManageExchange</b></a>
+          </li>
+          <!-- <li class="list-group-item">
+            <a  routerLink="/logout"><b>Logout</b></a>
+          </li> -->
+        </ul>
+</div>
+<div class="col-9 mt-5">
+<h3 class="text-center">CreateCompany</h3>
+<div class="card card-responsive mt-5 w-75 h-100 bg-light" >
+ <div class="card-body">
+      <form [formGroup]="company" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="bdec"><b class="text-primary">BreifDescription</b></label>
+          <textarea class="form-control" 
+          formControlName="bdec"
+           placeholder="Enter BreifDescription about company" 
+           name="bdec" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="bms"><b class="text-primary">BoardMembers</b></label>
+          <input type="text" 
+          class="form-control"
+          formControlName="bms"
+           placeholder="Enter BoardMembers"  
+          name="bms" required>
+        </div>
+        <div class="form-group">
+          <label for="ceo" ><b class="text-primary">CEOName</b></label>
+          <input type="text" 
+          class="form-control"
+          formControlName="ceo"
+           placeholder="Enter CEOName and CompanyName"  
+          name="ceo" required>
+        </div>
+        <div class="form-group">
+          <label for="cname"><b class="text-primary">CompanyName</b></label><br>
+          <input type="text"
+           class="form-control" 
+           formControlName="cname"
+           placeholder="Enter CompanyName" 
+           name="cname" required>
+        </div>
+        <div class="form-group">
+          <label for="se" ><b class="text-primary">SE</b></label>
+          <input class="form-control" 
+          formControlName="se"
+           placeholder="Select StockExchange" 
+          name="se" required>
+        </div>
+        <div class="form-group">
+          <label for="tover"><b class="text-primary">TurnOver</b></label>
+          <input type="text" 
+          class="form-control" 
+          formControlName="tover"
+           placeholder="Enter TurnOver" 
+          name="tover" required>
+        </div>
+        <div class="form-group">
+          <label for="cmpcode"><b class="text-primary">CompanyCode</b></label>
+          <input type="text" 
+          class="form-control" 
+          formControlName="cmpcode"
+           placeholder="Enter CompanyCode" 
+          name="cmpcode" required>
+        </div>
+        <button class="btn btn-success" 
+        (click)="addCompany()">Submit</button>&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-danger"
+         routerLink="/admin-home-page">Cancel</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>

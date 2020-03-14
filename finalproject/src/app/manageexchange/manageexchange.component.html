@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-3 mt-5">
+      <ul class="list-group text-center w-100">
+            <li class="list-group-item">
+              <a  routerLink="/users"><b>UserDetails</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/import-dta"><b>ImportData</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/updateipodetails"><b>UpdateIpoDetails</b></a>
+            </li>
+            <li class="list-group-item">
+              <a  routerLink="/managecompany"><b>ManageCompany</b></a>
+            </li>
+            <!-- <li class="list-group-item">
+              <a  routerLink="/stockexchange"><b>StockExchange</b></a>
+            </li> -->
+            <!-- <li class="list-group-item">
+              <a  routerLink="/manageexchange"><b>ManageExchange</b></a>
+            </li> -->
+            <!-- <li class="list-group-item">
+              <a  routerLink="/logout"><b>Logout</b></a>
+            </li> -->
+          </ul>
+          </div>
+<div class="col-9 mt-5">
+<h3 class="text-center">StockExchange List</h3>
+<div class="table-responsive">
+  <table  class="table table-bordered mt-5">
+  <tr>
+      <th>ID</th>
+      <th>StockExchange</th>
+      <th>Breif</th>
+      <th>Address</th>
+      <th>Remarks</th>
+      <th>Actions</th>
+  </tr>
+  <tr *ngFor="let exchange of exchanges">
+      <td>{{exchange.id}}</td>
+      <td>{{exchange.se}}</td>
+      <td>{{exchange.breif}}</td>
+      <td>{{exchange.address}}</td>
+      <td>{{exchange.remarks}}</td>
+      <td><button class="btn btn-danger" (click)="deleteStockExchange(exchange.id)">
+        <i class="fa fa-trash" aria-hidden="true"></i></button>&nbsp;&nbsp;&nbsp;
+      <button class="btn btn-warning" (click)="updateStockExchange(exchange)">
+       <i class="fa fa-pencil-alt" aria-hidden="true"></i></button></td>
+  </tr>
+</table>
+</div>
+<div class="text-center mt-5"> 
+    <button type="submit" class="btn btn-info" 
+    routerLink="/stockexchange">Add StockExchange</button>&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-danger" routerLink="/admin-home-page">Back</button>
+</div>
+</div>
+</div>
+</div>
